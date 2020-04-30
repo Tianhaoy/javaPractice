@@ -1,5 +1,7 @@
 package com.thy.sort;
 
+import java.util.Arrays;
+
 /**
  * @Description: TODO（选择排序算法）
  * @Author thy
@@ -11,28 +13,26 @@ package com.thy.sort;
  */
 public class StraightSelectionSort {
     public static void main(String[] args) {
-        int [] arr = {45,12,64,3,15,98,46};
+        int [] arr = {95,56,12,86,76,156,83,31,2,64,85,25,34,65,4512,556};
         int n = arr.length;
-        System.out.println("排序前顺序：");
-        for (int num:arr){
-            System.out.print(num+" ");
-        }
-        for (int i=0;i<n-1;i++){// 做第 i 趟排序
-            int min =i;
-            for (int j=i+1;j<n;j++){// 选最小的记录
+        System.out.println("排序前\n"+ Arrays.toString(arr));
+
+        //开始外层循环
+        for (int i =0;i<n-1;i++){
+            int min = i;
+            for (int j=i+1;j<n;j++){
                 if (arr[j]<arr[min]){
-                    min = j;//记下目前找到的最小值所在的位置
+                    min = j;
                 }
             }
-            //在内层循环结束，也就是找到本轮循环的最小的数以后，再进行交换
-            if (i!=min){ //交换 a[i]和 a[min]
+            //结束内层循环 将最小的min放在i中
+            if (i!=min){
                 int temp = arr[i];
                 arr[i] = arr[min];
-                arr[min] = temp;
+                arr[min]= temp;
             }
         }
-        System.out.println();
-        System.out.println("排序后顺序：");
+        System.out.println("排序后");
         for (int num:arr){
             System.out.print(num+" ");
         }
