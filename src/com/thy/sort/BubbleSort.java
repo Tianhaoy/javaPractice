@@ -1,7 +1,6 @@
 package com.thy.sort;
 import java.util.Arrays;
 import java.util.Scanner;
-
 /**
  * @Description: TODO（冒泡排序算法）
  * @Author
