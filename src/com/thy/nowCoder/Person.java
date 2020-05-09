@@ -8,10 +8,9 @@ package com.thy.nowCoder;
  * @Description:
  */
 public class Person{
-    private String name = "Person";
-    int age=0;
-    public String get(){
-        return name;
+    String name = "No name";
+    public Person(String nm) {
+        name = nm;
     }
 }
 
