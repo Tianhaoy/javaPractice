@@ -7,6 +7,7 @@ package com.thy.nowCoder;
  * @link https://github.com/Tianhaoy/hanzomall
  * @Description:
  */
+/*
 public class Child extends Person {
     public String grade;
     public static void main(String[] args){
@@ -15,3 +16,4 @@ public class Child extends Person {
         System.out.println(name);
     }
 }
+*/
