@@ -33,7 +33,7 @@ public class QuickSort {
         if (low<high){
             //分区操作，将一个数组分成两个分区，返回分区界限索引
             int midden = getMidden(arr,low,high);
-            //对左分区进行快排
+            //对左分区进行快排 递归调用
             quickSort(arr, low, midden-1);
             //对右分区进行快排
             quickSort(arr, midden+1, high);
