@@ -9,6 +9,8 @@ import java.util.Scanner;
  * 趟：首先比较第 1 个和第 2 个数，将小数放前，大数放后。然后比较第 2 个数和
  * 第 3 个数，将小数放前，大数放后，如此继续，直至比较最后两个数，将小数放
  * 前，大数放后。重复第一趟步骤，直至全部排序完成。
+ * 冒泡排序的最坏时间复杂度为：O(n2) 。
+ * 综上所述 ：冒泡排序总的平均时间复杂度为：O(n2) 。
  */
 public class BubbleSort {
     public static void main(String[] args) {

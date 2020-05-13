@@ -9,7 +9,8 @@ import java.util.Arrays;
  * 通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据
  * 都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快
  * 速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。
- * 时间复杂度logN
+ * 快速排序的最坏时间复杂度为：O(n2) 。
+ *  综上所述 ：快速排序总的平均时间复杂度为：O(nlog2n) 。
  */
 public class QuickSort {
     public static void main(String[] args) {
