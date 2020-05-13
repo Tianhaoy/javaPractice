@@ -12,23 +12,28 @@ import java.util.Scanner;
  */
 public class BubbleSort {
     public static void main(String[] args) {
-        int arr [] = {96,56,15,35,5,97,406,654,10};
-        int n = arr.length;
-        System.out.println("排序前:");
-        System.out.println(Arrays.toString(arr));
-        for (int i =0;i<n-1;i++){
+        //给出无序数组
+        int [] arr = {56,54,2,1,78,61,72,43,64,25,39,96,82};
+        //输出无序数组
+        System.out.println("排序前："+Arrays.toString(arr));
+        //进行冒泡排序
+        bubbleSort(arr);
+        //输出有序数组
+        System.out.println("排序后："+Arrays.toString(arr));
+    }
+
+    private static void bubbleSort(int[] arr) {
+        int n =arr.length;
+        //外层循环控制排序趟数
+        for (int i=0;i<n-1;i++){
+            //内层循环控制每一趟排序多少次
             for (int j=0;j<n-1-i;j++){
                 if (arr[j]>arr[j+1]){
-                    int temp =arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+                    int temp = arr[j+1];
+                    arr[j+1] = arr[j];
+                    arr[j] = temp;
                 }
             }
-        }
-        System.out.println();
-        System.out.println("排序后:");
-        for (int num:arr){
-            System.out.print(num+" ");
         }
     }
 }
