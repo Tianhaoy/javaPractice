@@ -12,16 +12,24 @@ import java.util.List;
  * @link https://github.com/Tianhaoy
  * @Description:
  */
-public class javaTest {
-    long g= 0xfffL;
-    double d = 5.4545d;
-    long var;
-    public void javaTest(int param) { var = param; }//(1)
-    public static void main(String[] args) {
-        javaTest a, b;
-        a =new javaTest();//(2)
-        b =new javaTest();//(3)
-    }
+public  class javaTest {
 
+    public void add(Byte b)
+    {
+        b = b++;
+    }
+    public void test()
+    {
+        Byte a = 127;
+        Byte b = 127;
+        add(++a);
+        System.out.print(a + " ");
+        add(b);
+        System.out.print(b + "");
+    }
+    public static void main(String[] args) {
+        new javaTest().test();
+    }
 }
+
 

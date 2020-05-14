@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 /**
  * @Description: TODO（选择排序算法）
- * @Author thy
- * @Date 2019/9/23 21:02
+ * @Author 在无人区看超市
+ * @Date 2020年5月14日 19:31:59
  * 每一趟从待排序的记录中选出最小的元素，顺序放在已排好序的序
  * 列最后，直到全部记录排序完毕。也就是：每一趟在 n-i+1(i=1，2，„n-1)个
  * 记录中选取关键字最小的记录作为有序序列中第 i 个记录。基于此思想的算法主
@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class StraightSelectionSort {
     public static void main(String[] args) {
         //给出无序数组
-        int [] arr = {56,54,2,1,78,61,72,43,64,25,39,96,82};
+        int [] arr = {6,8,4,9,10,1,5,2,7,3};
         //输出无序数组
         System.out.println("排序前："+Arrays.toString(arr));
         //进行选择排序

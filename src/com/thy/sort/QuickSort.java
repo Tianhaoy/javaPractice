@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @Description: TODO(快速排序算法)
- * @Author ASUS
+ * @Author 在无人区看超市
  * @Date 2020年5月10日 21:52:05
  * 通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据
  * 都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快
@@ -15,7 +15,7 @@ import java.util.Arrays;
 public class QuickSort {
     public static void main(String[] args) {
         //给出无序数组
-        int [] arr = {56,54,2,1,78,61,72,43,64,25,39,96,82};
+        int [] arr = {6,8,4,9,10,1,5,2,7,3};
         //输出无序数组
         System.out.println("排序前："+Arrays.toString(arr));
         //进行快速排序

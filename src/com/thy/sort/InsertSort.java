@@ -1,26 +1,29 @@
 package com.thy.sort;
 
+import java.util.Arrays;
+
 /**
  * @Description: TODO(直接插入排序算法)
- * @Author ASUS
- * @Date 2019/9/25 19:45
+ * @Author 在无人区看超市
+ * @Date 2020年5月14日 19:31:46
  * 把 n 个待排序的元素看成一个有序表和一个无序表，开始时有序表中只有一
  * 个元素，无序表中有 n-1 个元素；排序过程即每次从无序表中取出第一个元素，
  * 将它插入到有序表中，使之成为新的有序表，重复 n-1 次完成整个排序过程。
+ * 直接插入排序的最坏时间复杂度为：O(n2) 。
+ *  综上所述 ：直接插入排序总的平均时间复杂度为：O(n2)
  */
 public class InsertSort {
     public static void main(String[] args) {
-        int [] a = {45,64,15,2,31,16,9,7};
-        System.out.println("排序前：");
-        for (int num:a){
-            System.out.print(num+" ");
-        }
-        InsertSort InsertSort = new InsertSort();
-        InsertSort.insertSort(a);
+        //给出无序数组
+        int [] arr = {6,8,4,9,10,1,5,2,7,3};
+        //输出无序数组
+        System.out.println("排序前："+ Arrays.toString(arr));
+        //进行直接插入排序
+        insertSort(arr);
+        //输出有序数组
+        System.out.println("排序后："+Arrays.toString(arr));
     }
-    public void insertSort(int[] a){
-        System.out.println();
-        System.out.println("——————直接插入排序算法——————");
+    public static void insertSort(int[] a){
         int n = a.length;
         int i,j;
         for (i=1;i<n;i++){
@@ -35,18 +38,9 @@ public class InsertSort {
             a[j+1] = temp;
             Print(a,n,i);
         }
-        printResult(a,n);
     }
 
-    private void printResult(int[] a, int n) {
-        System.out.println("最终排序结果：");
-        for (int j=0;j<n;j++){
-            System.out.print(" "+a[j]);
-        }
-        System.out.println();
-    }
-
-    private void Print(int[] a, int n, int i) {
+    private static void Print(int[] a, int n, int i) {
         System.out.print("第"+i+"次：");
         for(int j=0;j<n;j++){
             System.out.print(" "+a[j]);

@@ -12,5 +12,9 @@ public class Person{
     public Person(String nm) {
         name = nm;
     }
+        public Person(){
+        System.out.println(122);
+
+    }
 }
 

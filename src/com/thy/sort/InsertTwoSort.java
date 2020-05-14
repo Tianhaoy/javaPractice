@@ -1,9 +1,11 @@
 package com.thy.sort;
 
+import java.util.Arrays;
+
 /**
  * @Description: TODO(直接插入排序算法的优化 ： 折半查找 / 二分查找)
- * @Author ASUS
- * @Date 2020/3/8 1:21
+ * @Author 在无人区看超市
+ * @Date 2020年5月14日 19:31:50
  * 折半插入算法是对直接插入排序算法的改进，排序原理同直接插入算法：
  * 把 n 个待排序的元素看成一个有序表和一个无序表，开始时有序表中只有一
  * 个元素，无序表中有 n-1 个元素；排序过程即每次从无序表中取出第一个元素，
@@ -13,12 +15,17 @@ package com.thy.sort;
  */
 public class InsertTwoSort {
     public static void main(String[] args) {
-        int a[] = {64, 45, 15, 2, 31, 16, 9, 7};
-        new InsertTwoSort().binaryInsertSort(a);
+        //给出无序数组
+        int [] arr = {6,8,4,9,10,1,5,2,7,3};
+        //输出无序数组
+        System.out.println("排序前："+ Arrays.toString(arr));
+        //进行直接排序
+        binaryInsertSort(arr);
+        //输出有序数组
+        System.out.println("排序后："+Arrays.toString(arr));
     }
 
-    private void binaryInsertSort(int[] a) {
-        System.out.println("———————折半插入排序算法————————");
+    private static void binaryInsertSort(int[] a) {
         int n = a.length;
         int i, j;
         for (i = 1; i < n; i++) {
@@ -46,34 +53,10 @@ public class InsertTwoSort {
             //打印每次循环的结果
             print(a, n, i);
         }
-        //打印排序结果
-        printResult(a, n);
+
     }
 
-    /**
-     * 打印排序的最终结果
-     *
-     * @param a
-     * @param n
-     */
-    private void printResult(int[] a, int n) {
-        System.out.print("最终排序结果：");
-        for (int j = 0; j < n; j++) {
-            System.out.print(" " + a[j]);
-        }
-        System.out.println();
-    }
-
-    /**
-     * 打印排序的每次循环的结果
-     *
-     * @param a
-     * @param n
-     * @param i
-     */
-
-    private void print(int[] a, int n, int i) {
-        // TODO Auto-generated method stub
+    private static void print(int[] a, int n, int i) {
         System.out.print("第" + i + "次：");
         for (int j = 0; j < n; j++) {
             System.out.print(" " + a[j]);
