@@ -14,32 +14,34 @@ public class TestSort {
         int [] arr = {6,8,4,9,10,1,5,2,7,3};
         //输出无序数组
         System.out.println("排序前："+ Arrays.toString(arr));
-        //进行直接排序
-        insertTwoSort(arr);
+        //进行希尔排序
+        shellSort2(arr);
         //输出有序数组
         System.out.println("排序后："+Arrays.toString(arr));
     }
 
-    private static void insertTwoSort(int[] a) {
-        int n = a.length;
-        int i,j;
-        for (i=1;i<n;i++){
-            int temp =a[i];
-            int low =0;
-            int high =i-1;
-            while (low<=high){
-                int mid = (low+high)/2;
-                if (a[mid]>temp){
-                    high =mid-1;
-                }else
-                    low = mid+1;
+    private static void shellSort2(int[] arr) {
+        int n =arr.length;
+        int i,j,k,gap;
+        for (gap=n/2;gap>0;gap/=2){
+            for (i=0;i<gap;i++){
+                for (j=i+gap;j<n;j+=gap){
+                    int temp = arr[j];
+                    for (k=j-gap;k>0 && arr[k]>temp;k-=gap){
+                        arr[k+gap] =arr[k];
+                    }
+                    arr[k+gap] =temp;
+                }
             }
-            for (j=i-1;j>=low;j--){
-                a[j+1] = a[j];
-            }
-            a[low] = temp;
+            printResult(arr,arr.length);
         }
     }
 
 
+    private static void printResult(int[] a, int n){
+        for(int j=0;j<n;j++){
+            System.out.print(" "+a[j]);
+        }
+        System.out.println();
+    }
 }
