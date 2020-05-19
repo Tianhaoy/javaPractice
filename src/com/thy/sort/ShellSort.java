@@ -6,6 +6,8 @@ import java.util.Arrays;
  * @Description: TODO（希尔排序算法）
  * @Author 在无人区看超市
  * @Date 2020年5月14日 19:32:48
+ *  希尔排序的最坏时间复杂度为：O(n2) 。
+ * 综上所述 ：希尔排序总的平均时间复杂度为：O(n1.3)
  */
 
 public class ShellSort {
