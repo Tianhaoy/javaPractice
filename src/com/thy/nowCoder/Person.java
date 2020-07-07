@@ -8,13 +8,8 @@ package com.thy.nowCoder;
  * @Description:
  */
 public class Person{
-    String name = "No name";
-    public Person(String nm) {
-        name = nm;
-    }
-        public Person(){
-        System.out.println(122);
-
+    public static String test(){
+        return "sss";
     }
 }
 
