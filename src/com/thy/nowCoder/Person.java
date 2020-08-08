@@ -9,7 +9,7 @@ package com.thy.nowCoder;
  */
 public class Person{
     public static String test(){
-        return "sss";
+        return "ttt";
     }
 }
 
